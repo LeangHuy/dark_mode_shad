@@ -13,12 +13,15 @@ class MyColors {
   static const Color selected = Color(0xFFF4F6FF);
   static const Color iconText = Color(0xFFFFFFFF);
 
-  // TEXT COLOR
-  static const Color main = Color(0xFF333333);
+  // TEXT COLOR LIGHT MODE
+  static const Color textColorMainLight = Color(0xFF333333);
   static const Color sub = Color(0xFF888888);
   static const Color tableTitle = Color(0xFF535E73);
   static const Color point = Color(0xFF263FB0);
   static const Color popup = Color(0xFFFFFFFF);
+
+  // TEXT COLOR DARK MODE
+  static const Color textColorMainDark =Color(0xFFFFFFFF);
 
   // DIVIDER COLOR
   static const Color dividerDark = Color(0xFFC2C2C2);
@@ -35,6 +38,7 @@ class MyColors {
   // BG COLOR
   static const Color bgGray = Color(0xFFF8F8F8);
   static const Color bgWhite = Color(0xFFFFFFFF);
+  static const Color bgBlack = Color(0xff020817);
 
   // OTHER - Backgrounds
   static const Color successBg = Color(0xFFE8F5E9);

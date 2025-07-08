@@ -72,6 +72,18 @@ class HomePage extends StatelessWidget {
               spacing: 10,
               children: [
                 ShadButton(child: const Text('Primary'), onPressed: () {}),
+                ShadButton.outline(
+                  child: const Text('Outline'),
+                  onPressed: () {},
+                ),
+                ShadButton.ghost(
+                  child: const Text('Ghost'),
+                  onPressed: () {},
+                ),
+                ShadButton.secondary(
+                  child: const Text('Secondary'),
+                  onPressed: () {},
+                ),
                 ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 320),
                   child: const ShadInput(
@@ -80,7 +92,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 PopoverPage(),
-                SelectExample()
+                SelectExample(),
               ],
             ),
             Row(
