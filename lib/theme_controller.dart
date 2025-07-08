@@ -3,11 +3,13 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
+import 'custom_color.dart';
+
 class ThemeController extends GetxController {
   final storage = GetStorage();
 
   final isDarkMode = false.obs;
-  final colorSchemeName = 'slate'.obs;
+  final colorSchemeName = 'red'.obs;
 
   @override
   void onInit() {
@@ -27,16 +29,15 @@ class ThemeController extends GetxController {
   }
 
   ShadThemeData get currentTheme => ShadThemeData(
+    disableSecondaryBorder: true,
     brightness: Brightness.light,
-    colorScheme: ShadColorScheme.fromName(colorSchemeName.value),
+    colorScheme: MyCustomColorScheme.light(),
   );
 
   ShadThemeData get currentDarkTheme => ShadThemeData(
+    disableSecondaryBorder: true,
     brightness: Brightness.dark,
-    colorScheme: ShadColorScheme.fromName(
-      colorSchemeName.value,
-      brightness: Brightness.dark,
-    ),
+    colorScheme: MyCustomColorScheme.dark(),
   );
 
   ThemeMode get themeMode =>
